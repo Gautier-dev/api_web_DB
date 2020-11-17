@@ -29,7 +29,7 @@ def data():
         try:
             print("Executing SQL query")
             print(request.args.get('GET-SQL'))
-            cur.execute(request.form['GET-SQL'])
+            cur.execute(request.args.get('GET-SQL'))
         except:
             return render_template("get_data.html", msg="Error")
         data = cur.fetchall()
