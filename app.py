@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 #import psycopg2
 
-
+import psycopg2
 
 conn = psycopg2.connect(dbname=os.environ['DBNAME'], user=os.environ['POSTGRES_USER'],
                             password=os.environ['POSTGRES_PASSWORD'], host=os.environ['URL_DB'], port="5432")
