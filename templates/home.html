@@ -3,13 +3,13 @@
 <body>
 
 <form action="{{url}}/data" method="get">
-    <label for="GET-name">Requête SQL (SELECT):</label>
+    <label for="GET-name">Requête SQL (GET):</label>
     <input id="GET-name" type="text" name="GET-SQL">
     <input type="submit" value="Afficher les données récupérées">
 </form>
 
 <form action="{{url}}/data" method="post">
-    <label for="POST">Modification de la base de donnée:</label>
+    <label for="POST">Requête SQL (POST):</label>
     <input id="POST" type="text" name="POST-SQL">
     <input type="submit" value="Executer la requête">
 </form>
