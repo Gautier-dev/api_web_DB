@@ -7,7 +7,7 @@ RUN apt-get update
 RUN apt-get install python3 -y
 RUN apt-get install python3-pip -y
 RUN pip3 install flask
-RUN pip3 install psycopg2
+RUN pip3 install psycopg2-binary
 COPY . /app/
 WORKDIR /app
 CMD ["export", "FLASK_APP=app_flask.py"]
