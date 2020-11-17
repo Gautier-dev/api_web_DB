@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="{{url}}/data" method="get">
+    <label for="GET-name">Requête SQL (SELECT):</label>
+    <input id="GET-name" type="text" name="GET-SQL">
+    <input type="submit" value="Afficher les données récupérées">
+</form>
+
+<form action="{{url}}/data" method="post">
+    <label for="POST">Modification de la base de donnée:</label>
+    <input id="POST" type="text" name="POST-SQL">
+    <input type="submit" value="Executer la requête">
+</form>
+
+</body>
+</html>
+
+
