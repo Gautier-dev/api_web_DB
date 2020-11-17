@@ -11,4 +11,4 @@ RUN pip3 install psycopg2
 COPY . /app/
 WORKDIR /app
 CMD ["export", "FLASK_APP=app_flask.py"]
-CMD ["flask", "run"]
+CMD ["python3", "-m", "flask", "run"]
