@@ -30,7 +30,7 @@ def data():
             print("Executing SQL query")
             print(request.args.get('GET-SQL'))
             cur.execute(request.args.get('GET-SQL'))
-        except:
-            return render_template("get_data.html", msg="GET Error")
+        except psycopg2.Error as e:
+            return render_template("get_data.html", msg="db error : {}".format(e.pgerror))
         data = cur.fetchall()
         return str(data)
