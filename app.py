@@ -23,7 +23,7 @@ def data():
             print(request.form['POST-SQL'])
             cur.execute(request.form['POST-SQL'])
         except:
-            return render_template("post_data.html", msg="Error")
+            return render_template("post_data.html", msg="POST Error")
         return render_template("post_data.html", msg="Success")
     else:
         try:
@@ -31,6 +31,6 @@ def data():
             print(request.args.get('GET-SQL'))
             cur.execute(request.args.get('GET-SQL'))
         except:
-            return render_template("get_data.html", msg="Error")
+            return render_template("get_data.html", msg="GET Error")
         data = cur.fetchall()
         return str(data)
