@@ -2,10 +2,11 @@ from flask import Flask, render_template, request
 import psycopg2
 import os
 
+
 app = Flask(__name__)
 
-conn = psycopg2.connect(dbname=os.environ['DBNAME'], user=os.environ['POSTGRES_USER'],
-                            password=os.environ['POSTGRES_PASSWORD'], host=os.environ['URL_DB'], port="5432")
+conn = psycopg2.connect(dbname="info_capteur", user="surveillancedevieux",
+                            password="surveillancedevieux", host="surveillancedevieux-postgresql-db.apps.asidiras.dev", port="5432")
 print("Connected to the data base")
 
 cur = conn.cursor()
